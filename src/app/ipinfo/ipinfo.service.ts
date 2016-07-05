@@ -3,14 +3,18 @@ import {Response, Jsonp, URLSearchParams} from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-
-import { Observable }     from 'rxjs/Observable';
 @Injectable()
 export class IpinfoService {
 
   constructor(private jsonp: Jsonp) {}
-  getInfo(){
-    let url = 'http://ipinfo.io/186.95.2222226.85';
+  
+  /**
+   * getInfo from ip-api.com jsonp, ip optional
+   */
+  getInfo(ip?: string){
+    let urlService = 'http://ip-api.com/json/';
+    let url;
+    ip ? url = `${urlService}${ip}` : url = urlService;
     let params = new URLSearchParams();
     params.set('callback', 'JSONP_CALLBACK');
     return this.jsonp
