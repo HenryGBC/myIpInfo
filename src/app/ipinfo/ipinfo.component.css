@@ -2,3 +2,14 @@
     width: 600px;
     height: 400px;
 }
+
+.content-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-info{
+    padding: 30px;
+    font-size: 30px;
+    line-height: 50px;
+}

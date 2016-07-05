@@ -14,7 +14,7 @@ import { IpinfoComponent } from './ipinfo.component';
 
 describe('Component: Ipinfo', () => {
   it('should create an instance', () => {
-    let component = new IpinfoComponent();
+    let component = new IpinfoComponent(window);
     expect(component).toBeTruthy();
   });
 });

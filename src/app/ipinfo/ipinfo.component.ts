@@ -12,6 +12,7 @@ export class IpinfoComponent implements OnChanges{
   }
 
   ngOnChanges(changes: any) {
+    console.log(this.ipInfo);
     this.setMap(this.ipInfo.lat, this.ipInfo.lon);
   }
   /**

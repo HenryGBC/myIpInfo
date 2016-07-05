@@ -12,7 +12,6 @@ import { IpinfoComponent } from './ipinfo/ipinfo.component';
   directives: [IpinfoComponent]
 })
 export class AppComponent implements OnInit{
-  title = 'app works!';
   ipInfo: IpInfo;
   ip: string;
   ipForm: {};
